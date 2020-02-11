@@ -1,5 +1,5 @@
 /**
- * int _islower - Entry point
+ * _islower - Entry point
  *
  * @c: - is a parameter
  *
