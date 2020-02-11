@@ -20,6 +20,6 @@ void print_alphabet_x10(void)
 			_putchar(letter++);
 		}
 		_putchar('\n');
-		times++
+		times++;
 	}
 }
