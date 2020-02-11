@@ -18,7 +18,8 @@ void times_table(void)
 		j = 0;
 		while (j <= 9)
 		{
-			_putchar((var_Print / 10) + '0');
+			if (var_Print > 9)
+				_putchar((var_Print / 10) + '0');
 			_putchar((var_Print % 10)  + '0');
 			if (j != 9)
 			{
