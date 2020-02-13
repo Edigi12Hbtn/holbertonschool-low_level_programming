@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_diagonal- Entry point
+ * print_diagonal - Entry point
  *
  * @n: - number;
  *
@@ -15,7 +15,7 @@ void print_diagonal(int n)
 	{
 		for (c = 0; c < (l - 1); c++)
 			_putchar(' ');
-		_putchar('\');
+		_putchar(92);
 		if (l != n)
 			_putchar('\n');
 	}
