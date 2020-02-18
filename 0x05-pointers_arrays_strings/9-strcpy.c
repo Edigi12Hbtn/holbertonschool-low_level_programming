@@ -5,6 +5,8 @@
  *
  * @dest: Buffer where will be stored the value in *src
  * @src: Source of data for buffer
+ *
+ * Return: returns dest pointer
  */
 
 char *_strcpy(char *dest, char *src)
