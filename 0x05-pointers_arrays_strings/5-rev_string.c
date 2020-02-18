@@ -26,7 +26,7 @@ void rev_string(char *s)
 		arr[pos_max - pos] = s[pos];
 		pos--;
 	}
-	arr[pos_max + 1] = '\n';
+	pos++;
 	while (pos <= pos_max)
 	{
 		s[pos] = arr[pos];
