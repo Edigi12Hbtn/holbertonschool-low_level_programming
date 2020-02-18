@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdio.h>
-
 /**
  * print_array - print the first n integers of a array
  *
@@ -12,7 +11,7 @@ void print_array(int *a, int n)
 {
 	int i;
 
-	for(i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
 		printf("%d", a[i]);
 
