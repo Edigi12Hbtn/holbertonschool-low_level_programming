@@ -9,7 +9,7 @@
 void rev_string(char *s)
 {
 	int pos, pos_max;
-	char arr[100];
+	char arr[10000];
 
 	pos = 0;
 	pos_max = 0;
