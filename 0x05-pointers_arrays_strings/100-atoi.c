@@ -5,6 +5,8 @@
   * _atoi - atoi function
   *
   * @s: string
+  *
+  * Return: return the first number
   */
 
 int _atoi(char *s)
