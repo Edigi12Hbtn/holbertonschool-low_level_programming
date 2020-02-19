@@ -17,7 +17,7 @@ int _atoi(char *s)
 	look_for_sign = 0;
 	num = 0;
 	/*printf("s: %s\n", s);*/
-	while (s[init] < '0' || s[init] > '9')
+	while ((s[init] < '0' || s[init] > '9') && (s[init] != '\0'))
 		init++;
 	while (s[init] >= '0' && s[init] <= '9')
 		init++;
@@ -25,6 +25,8 @@ int _atoi(char *s)
 	/*printf("init: %d\n", init);*/
 	for (i = init; i >= 0; i--)
 	{
+		if (s[i] == '\0')
+			return (0);
 		/*printf("s[i]: %d\n", s[i]);*/
 		if (s[i] >= '0' && s[i] <= '9' && look_for_sign == 0)
 		{
