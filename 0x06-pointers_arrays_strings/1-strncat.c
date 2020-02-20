@@ -5,6 +5,7 @@
  *
  * @dest: destine
  * @src: source
+ * @n: characters to take
  *
  * Return: returns the pointer that points to dest
  */
