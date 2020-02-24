@@ -24,5 +24,9 @@ char *_strchr(char *s, char c)
 			return (ret);
 		}
 	}
+	if (c == '\0')
+	{
+		return (s + i);
+	}
 	return (NULL);
 }
