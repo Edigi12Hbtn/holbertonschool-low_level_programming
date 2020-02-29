@@ -14,7 +14,7 @@
 int main(int argc, char *argv[])
 {
 	int cents, coins, i;
-	int values[] = {25, 10, 5, 2, 1}; 
+	int values[] = {25, 10, 5, 2, 1};
 
 	coins = 0;
 	if (argc != 2)
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		if (atoi(argv[1]) < 0)
 		{
 			printf("0\n");
-			return(0);
+			return (0);
 		}
 		else
 		{
