@@ -2,7 +2,10 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point
+ * create_array - create array of chars
+ *
+ * @size: size of array
+ * @c: char for array
  *
  * Return: Always 0 (Success)
  */
@@ -11,7 +14,7 @@ char *create_array(unsigned int size, char c)
 {
 	char *str;
 	unsigned int i = 0;
-	
+
 	if (size == 0)
 		return (NULL);
 	str = malloc(size * sizeof(char));
