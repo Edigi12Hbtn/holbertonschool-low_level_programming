@@ -16,7 +16,7 @@ char *argstostr(int ac, char **av)
 	int *sizes_p1; /*sizes of strings plus one*/
 	int i = 0, j = 0, tot_size = 0, i_bef = 0;
 
-	if (ac == 0 || av == NULL)
+	if (ac <= 0 || av == NULL)
 		return (NULL);
 	sizes_p1 = malloc(ac * sizeof(int));
 	if (sizes_p1 == NULL)
