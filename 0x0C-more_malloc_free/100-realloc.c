@@ -40,7 +40,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			min = old_size;
 		else
 			min = new_size;
-	
+
 		for (i = 0; i < min; i++)
 			pointer_2[i] = pointer[i];
 		free(ptr);
