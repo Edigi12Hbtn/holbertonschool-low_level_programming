@@ -34,13 +34,16 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	pointer = ptr;
 	pointer_2 = ptr_2;
 
-	if (old_size < new_size)
-		min = old_size;
-	else
-		min = new_size;
-
-	for (i = 0; i < min; i++)
-		pointer_2[i] = pointer[i];
-	free(ptr);
+	if (ptr != NULL)
+	{
+		if (old_size < new_size)
+			min = old_size;
+		else
+			min = new_size;
+	
+		for (i = 0; i < min; i++)
+			pointer_2[i] = pointer[i];
+		free(ptr);
+	}
 	return (ptr_2);
 }
