@@ -9,7 +9,7 @@
  * Return: Always 0 (Success)
  */
 
-int main (void)
+int main(void)
 {
 	printf("%s\n", FILE_NAME);
 	return (0);
