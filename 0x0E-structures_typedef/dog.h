@@ -10,6 +10,8 @@
  * Description: Longer description
  */
 
+typedef struct dog dog_t;
+
 struct dog
 {
 	char *name;
