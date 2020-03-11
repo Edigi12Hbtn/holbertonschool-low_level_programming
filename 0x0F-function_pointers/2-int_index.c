@@ -5,7 +5,7 @@
  *
  * @array: array.
  * @size: size of array.
- * cmp: compare function.
+ * @cmp: compare function.
  *
  * Return: returns the index of the first element for
  * which the cmp function does not return 0
