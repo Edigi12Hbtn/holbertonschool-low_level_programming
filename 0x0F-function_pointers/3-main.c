@@ -10,10 +10,10 @@
  * Return: Always 0 (Success)
  */
 
-int main(int argc,char *argv[])
+int main(int argc, char *argv[])
 {
 	int result;
-	int (*f) (int, int);
+	int (*f)(int, int);
 
 	if (argc != 4)
 	{
@@ -21,7 +21,8 @@ int main(int argc,char *argv[])
 		exit(98);
 	}
 
-	if (argv[2][1] != '\0' || (argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '*' && argv[2][0] != '/' && argv[2][0] != '%'))
+	if (argv[2][1] != '\0' || (argv[2][0] != '+' && argv[2][0]
+	 != '-' && argv[2][0] != '*' && argv[2][0] != '/' && argv[2][0] != '%'))
 	{
 		printf("Error\n");
 		exit(99);

@@ -29,7 +29,7 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_mult - multiply two numbers.
+ * op_mul - multiply two numbers.
  *
  * @a: first integer.
  * @b: second integer.
