@@ -3,27 +3,26 @@
 
 void print_char(va_list ap)
 {
-	printf("%c, ", va_arg(ap, int));
+	printf("%c", va_arg(ap, int));
 }
 
 void print_integer(va_list ap)
 {
-	printf("%i, ", va_arg(ap, int));
+	printf("%i", va_arg(ap, int));
 }
 
 void print_float(va_list ap)
 {
-	printf("%f, ", va_arg(ap, double));
+	printf("%f", va_arg(ap, double));
 }
 
 void print_string(va_list ap)
 {
 	char *str = va_arg(ap, char*);
 
-	if (str != NULL)
-		printf("%s, ", str);
-	else
-		printf("(nil), ");
+	if (str == NULL)
+		str = "(nil)";
+	printf("%s", str);
 }
 
 /**
@@ -35,6 +34,7 @@ void print_string(va_list ap)
 void print_all(const char * const format, ...)
 {
 	int i = 0, j = 0;
+	char *separator = "";
 	struct print_func char_to_func[] ={{'c', print_char},
 		{'i', print_integer},{'f', print_float},{'s', print_string}};
 	va_list ap;
@@ -49,7 +49,9 @@ void print_all(const char * const format, ...)
 			{
 				j++;
 			}
+			printf("%s", separator);
 			char_to_func[j].f(ap);
+			separator = ", ";
 		}
 		i++;
 	}
