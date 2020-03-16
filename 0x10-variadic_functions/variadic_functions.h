@@ -2,6 +2,19 @@
 #define VARIADIC_H
 #include <stdarg.h>
 
+/**
+ * print_func - Typedef for unsigned int
+ */
+typedef struct print_func print_func;
+
+/**
+ * struct print_func - Short description
+ * @c: First member
+ * @f: Second member
+ *
+ * Description: Longer description
+ */
+
 struct print_func
 {
 	char c;
