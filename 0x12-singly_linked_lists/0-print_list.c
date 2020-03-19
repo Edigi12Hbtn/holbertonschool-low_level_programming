@@ -15,23 +15,27 @@ size_t print_list(const list_t *h)
 	const list_t *current_list;
 
 	current_list = h;
-	while (current_list->next != NULL)
+
+	if (current_list != NULL)
 	{
+		while (current_list->next != NULL)
+		{
+			n++;
+			string = current_list->str;
+			if (string != NULL)
+				printf("[%u] %s\n", current_list->len, string);
+			else
+				printf("[0] (nil)\n");
+			current_list = current_list->next;
+		}
+
 		n++;
 		string = current_list->str;
 		if (string != NULL)
 			printf("[%u] %s\n", current_list->len, string);
 		else
 			printf("[0] (nil)\n");
-		current_list = current_list->next;
 	}
-
-	n++;
-	string = current_list->str;
-	if (string != NULL)
-		printf("[%u] %s\n", current_list->len, string);
-	else
-		printf("[0] (nil)\n");
 
 	return (n);
 }
