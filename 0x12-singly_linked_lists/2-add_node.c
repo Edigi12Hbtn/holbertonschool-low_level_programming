@@ -1,5 +1,14 @@
 #include "lists.h"
 
+/**
+ * add_node - add  a node.
+ *
+ * @head: .
+ * @str: .
+ *
+ * Return: ...
+ */
+
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node;
