@@ -15,7 +15,7 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *ptr2;
 
 	if (head == NULL)
-		exit(98);
+		return (len);
 
 	ptr = head;
 	ptr2 = head;
@@ -37,6 +37,5 @@ size_t print_listint_safe(const listint_t *head)
 
 		ptr = ptr->next;
 	}
-
 	return (len);
 }
