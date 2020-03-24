@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * print_listint - prints all the elements of a listint_t list.
+ * print_listint_safe - prints all the elements of a listint_t list.
  *
- * @h: head of linked list.
+ * @head: head of linked list.
  *
  * Return: the number of nodes.
  */
@@ -21,7 +21,7 @@ size_t print_listint_safe(const listint_t *head)
 	ptr2 = head;
 	while (ptr != NULL)
 	{
-		len++;		
+		len++;
 		printf("[%p] %d\n", (void *)ptr, ptr->n);
 
 		while (ptr2 != ptr)
