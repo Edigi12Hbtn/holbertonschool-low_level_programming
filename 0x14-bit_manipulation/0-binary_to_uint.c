@@ -17,14 +17,14 @@ unsigned int binary_to_uint(const char *b)
 	if (b == NULL)
 		return (0);
 
-	while(b[idx] != '\0')
+	while (b[idx] != '\0')
 	{
 		num <<= 1;
 
-		if (b[idx] != '0' && b[idx] != '1')
-			return (0);
-		else
+		if (b[idx] == '0' || b[idx] == '1')
 			num += b[idx] - 48;
+		else
+			return (0);
 
 		idx++;
 	}
