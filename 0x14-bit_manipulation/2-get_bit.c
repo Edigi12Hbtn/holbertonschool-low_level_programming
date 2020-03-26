@@ -19,7 +19,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		digits++;
 	}
 
-	if (digits - 1 < index)
+	if (sizeof(unsigned long int) * 8 < index)
 		return (-1);
 
 	aux = index;
