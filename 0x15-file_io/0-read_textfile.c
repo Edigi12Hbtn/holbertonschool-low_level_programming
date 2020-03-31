@@ -1,9 +1,14 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
+ * read_textfile -  reads a text file and
+ * prints it to the POSIX standard output.
  *
- * Return: Always 0 (Success)
+ * @filename: filename of name to read.
+ * @letters: numbers of letters to read and write.
+ *
+ * Return: returns the actual number of letters
+ * it could read and print.
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
