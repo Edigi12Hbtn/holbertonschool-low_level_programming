@@ -27,7 +27,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (*key == '\0')
 		return (0);
 
-	index = key_index((const unsigned char *) key, ht->size); /* calculate the index */
+	index = key_index((const unsigned char *) key, ht->size);
+	/* calculate the index */
 
 	dblptr_node = ht->array;
 	dblptr_node += index; /* Let's point to the list */
@@ -49,7 +50,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  * Return: pointer to the new element added of NULL if it fails.
  */
 
-hash_node_t *add_hash_node(hash_node_t **head, const char *key, const char *value)
+hash_node_t *add_hash_node(hash_node_t **head,
+			   const char *key, const char *value)
 {
 	hash_node_t *new_node = NULL;
 
@@ -59,13 +61,8 @@ hash_node_t *add_hash_node(hash_node_t **head, const char *key, const char *valu
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
 		return (NULL);
-	new_node->key = strdup(key);
-	if (new_node->key == NULL)
-	{
-		free(new_node);
-		return (NULL);
-	}
 
+	new_node->key = key;
 	new_node->value = strdup(value);
 	if (new_node->value == NULL)
 	{
