@@ -34,7 +34,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	dblptr_node += index; /* Let's point to the list */
 
 	/* call the function to add the node */
-	if (add_hash_node(dblptr_node, (char *) key, value) == NULL)
+	if (add_hash_node(dblptr_node, key, value) == NULL)
 		return (0);
 
 	return (1);
@@ -51,7 +51,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  */
 
 hash_node_t *add_hash_node(hash_node_t **head,
-			   char *key, const char *value)
+			   const char *key, const char *value)
 {
 	hash_node_t *new_node = NULL;
 
@@ -62,10 +62,17 @@ hash_node_t *add_hash_node(hash_node_t **head,
 	if (new_node == NULL)
 		return (NULL);
 
-	new_node->key = key;
+	new_node->key = strdup(key);
+	if (new_node->key == NULL)
+	{
+		free(new_node);
+		return (NULL);
+	}
+
 	new_node->value = strdup(value);
 	if (new_node->value == NULL)
 	{
+		free(new_node->key);
 		free(new_node);
 		return (NULL);
 	}
