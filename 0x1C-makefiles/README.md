@@ -3,8 +3,6 @@
 Learning Objectives
 -------------------
 
-At the end of this project, you are expected to be able to[explain to anyone](https://intranet.hbtn.io/rltoken/Kk_tqvblBiaRDCcgnd7eQg "explain to anyone"),**without the help of Google**:
-
 ### General
 
 -   What are`make`, Makefiles
@@ -16,9 +14,6 @@ At the end of this project, you are expected to be able to[explain to anyone](ht
 
 Tasks
 -----
-
-Done?\
-Help
 
 #### 0\. make -f 0-Makefilemandatory
 
