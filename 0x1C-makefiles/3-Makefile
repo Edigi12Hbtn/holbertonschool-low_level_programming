@@ -1,0 +1,21 @@
+CC = gcc
+SRC = main.c holberton.c
+OBJ = $(SRC:.c=.o)
+NAME = holberton
+RM = rm -f
+
+all: $(NAME)
+
+.PHONY : clean  oclean fclean
+clean:
+	$(RM) $(wildcard *~) $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: oclean all
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
