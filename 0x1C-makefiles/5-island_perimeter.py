@@ -28,8 +28,15 @@ def island_perimeter(grid):
                 if col - 1 >= 0:
                     if grid[row][col - 1]:
                         perimeter += 1
-            elif (row == 0 or row == rows -1 or
-                  col == 0 or col == cols -1):
-               perimeter += 1
+            elif (row == 0 or row == rows - 1 or
+                  col == 0 or col == cols - 1):
+                if col - 1 < 0:
+                    perimeter += 1
+                if col + 1 == cols:
+                    perimeter += 1
+                if row - 1 < 0:
+                    perimeter += 1
+                if row + 1 == rows:
+                    perimeter += 1
 
     return perimeter
