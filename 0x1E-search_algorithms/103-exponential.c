@@ -4,8 +4,9 @@
  * binary_search1 - binary search algorithm implementation.
  *
  * @array: ordered array of integers.
- * @size: size of array.
  * @value: value to search for.
+ * @left: left bound.
+ * @right: right bound.
  *
  * Return: index where value was found or -1.
  */
@@ -39,7 +40,7 @@ int binary_search1(int *array, int value, size_t left, size_t right)
 
 /**
  * exponential_search - function that searches for a value in a
- * sorted array of integers using the Exponential search algorithm. 
+ * sorted array of integers using the Exponential search algorithm.
  *
  * @array: a pointer to the first element of the array to search in.
  * @size: number of elements in array.
@@ -63,5 +64,5 @@ int exponential_search(int *array, size_t size, int value)
 	else
 		min = bound - 1;
 
-	return binary_search1(array, value, bound/2, min);
+	return (binary_search1(array, value, bound / 2, min));
 }
