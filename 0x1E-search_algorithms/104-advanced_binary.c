@@ -53,6 +53,8 @@ int advanced_binary(int *array, size_t size, int value)
 {	
 	int left = 0, right = (int) size - 1;
 
-	return (binarySearch(array, left, right, value)); 
+	if (array == NULL)
+		return (-1);
 
+	return (binarySearch(array, left, right, value)); 
 }
