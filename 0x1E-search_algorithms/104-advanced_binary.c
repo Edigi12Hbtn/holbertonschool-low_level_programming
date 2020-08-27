@@ -1,8 +1,19 @@
 #include "search_algos.h"
 
+/**
+ * binarySearch2 - function that searches a
+ * value inside an array.
+ *
+ * @arr: array of integers.
+ * @l: left bound.
+ * @r: right bound.
+ * @x: value to look for in array.
+ *
+ * Return: first index were x was found.
+ */
 
-int binarySearch(int arr[], int l, int r, int x) 
-{ 
+int binarySearch2(int arr[], int l, int r, int x)
+{
 	int i = l, mid = l;
 
 	if (i <= r)
@@ -17,29 +28,28 @@ int binarySearch(int arr[], int l, int r, int x)
 		i++;
 	}
 
-	if (r >= l) { 
+	if (r >= l)
+	{
 		mid = l + (r - l) / 2;
-
-	        if (arr[mid] == x) 
+		if (arr[mid] == x)
 		{
 			if (mid > l && arr[mid - 1] == x)
-				return binarySearch(arr, l, mid, x);
-			else
-	       	    		return mid;
+				return (binarySearch2(arr, l, mid, x));
+			return (mid);
 		}
 
-		if (arr[mid] > x) 
-			return binarySearch(arr, l, mid - 1, x); 
-		else
-			return binarySearch(arr, mid + 1, r, x); 
-	} 
+		if (arr[mid] > x)
+			return (binarySearch2(arr, l, mid - 1, x));
+		return (binarySearch2(arr, mid + 1, r, x));
+	}
 
-	return (-1); 
+	return (-1);
 }
 
 
 /**
- * advanced_binary -
+ * advanced_binary - function that searches for
+ * a value in a sorted array of integers.
  *
  * @array: pointer to the first element of the array to search in.
  * @size: number of elements in array.
@@ -50,11 +60,11 @@ int binarySearch(int arr[], int l, int r, int x)
 
 
 int advanced_binary(int *array, size_t size, int value)
-{	
+{
 	int left = 0, right = (int) size - 1;
 
 	if (array == NULL || size == 0)
 		return (-1);
 
-	return (binarySearch(array, left, right, value)); 
+	return (binarySearch2(array, left, right, value));
 }
