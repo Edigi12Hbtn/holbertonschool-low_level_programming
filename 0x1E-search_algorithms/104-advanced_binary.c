@@ -39,7 +39,7 @@ int binarySearch2(int arr[], int l, int r, int x)
 		}
 
 		if (arr[mid] > x)
-			return (binarySearch2(arr, l, mid - 1, x));
+			return (binarySearch2(arr, l, mid, x));
 		return (binarySearch2(arr, mid + 1, r, x));
 	}
 
